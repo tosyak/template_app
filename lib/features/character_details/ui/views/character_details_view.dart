@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,18 +7,16 @@ import 'package:ricknotmorty/core/service_locator/service_locator.dart';
 import 'package:ricknotmorty/core/shared/themes/app_colors.dart';
 import 'package:ricknotmorty/domain/entities/character_entity.dart';
 
-@RoutePage(name: "CharacterDetailsRoute")
-class CharacterDetails extends StatefulWidget {
-  static const routeName = "/character-details";
+class CharacterDetailsView extends StatefulWidget {
   final Character character;
 
-  const CharacterDetails({super.key, required this.character});
+  const CharacterDetailsView({super.key, required this.character});
 
   @override
-  State<CharacterDetails> createState() => _CharacterDetailsState();
+  State<CharacterDetailsView> createState() => _CharacterDetailsViewState();
 }
 
-class _CharacterDetailsState extends State<CharacterDetails> {
+class _CharacterDetailsViewState extends State<CharacterDetailsView> {
   final CacheManager _cacheManager = getIt<CacheManager>();
 
   Color _getStatusColor() {

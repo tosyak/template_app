@@ -10,9 +10,9 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i9;
-import 'package:flutter/cupertino.dart' as _i10;
+import 'package:flutter/material.dart' as _i10;
 import 'package:ricknotmorty/domain/entities/character_entity.dart' as _i11;
-import 'package:ricknotmorty/features/character_details/character_details.dart'
+import 'package:ricknotmorty/features/character_details/ui/pages/character_details_screen.dart'
     as _i1;
 import 'package:ricknotmorty/features/characters_list/pages/characters_screen.dart'
     as _i2;
@@ -27,7 +27,7 @@ import 'package:ricknotmorty/features/splash/splash_screen.dart' as _i8;
 import 'package:ricknotmorty/features/widgets/network_error_dialog.dart' as _i6;
 
 /// generated route for
-/// [_i1.CharacterDetails]
+/// [_i1.CharacterDetailsScreen]
 class CharacterDetailsRoute
     extends _i9.PageRouteInfo<CharacterDetailsRouteArgs> {
   CharacterDetailsRoute({
@@ -46,7 +46,10 @@ class CharacterDetailsRoute
     name,
     builder: (data) {
       final args = data.argsAs<CharacterDetailsRouteArgs>();
-      return _i1.CharacterDetails(key: args.key, character: args.character);
+      return _i1.CharacterDetailsScreen(
+        key: args.key,
+        character: args.character,
+      );
     },
   );
 }
